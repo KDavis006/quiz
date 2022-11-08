@@ -21,23 +21,21 @@ let input = [
 
 //Part 1 break down the list and find the index of 2021
 
-for(let i = 0; i <= input.length; i++){
- if(input[i] == 2021){
-  console.log(input[i]);
-  return
- }
-}
+// for(let i = 0; i <= input.length; i++){
+//  if(input[i] == 2021){
+//   console.log(input[i]);
+//  }
+// }
 //Part 2 go through the list and find the 2 numbers that add to 2021
-for(let i = 0; i <= input.length; i++){
- for(let o = 0; o <= input.length; o++){
-  var c = input[i] + input[o];
-  if(c == 2021){
-   console.log(input[i]);
-   console.log(input[o]);
-   return
-  }
- } 
- }
+// for(let i = 0; i <= input.length; i++){
+//  for(let o = 0; o <= input.length; o++){
+//   var c = input[i] + input[o];
+//   if(c == 2021){
+//    console.log(input[i]);
+//    console.log(input[o]);
+//   }
+//  } 
+//  }
 
 //and multiply them
 // Extra Credit:
@@ -48,43 +46,56 @@ for(let i = 0; i <= input.length; i++){
 
 // Array Part Two - Fix It
 
-const drinks = [
-  "Soda",
-  "Coffee",
-  "Lemonade",
-  "Iced tea",
-  "Juice",
-  "Milkshake",
-  "Water",
-  "Milk",
-  "Beer",
-  "Martini",
-  "Margarita",
-  "Wine",
-  "Daiquari",
-];
+// const drinks = [
+//   "Soda",
+//   "Coffee",
+//   "Lemonade",
+//   "Iced tea",
+//   "Juice",
+//   "Milkshake",
+//   "Water",
+//   "Milk",
+//   "Beer",
+//   "Martini",
+//   "Margarita",
+//   "Wine",
+//   "Daiquari",
+// ];
 
-let mDrinks = drinks.filter(drinks == "M...");
-console.log(mDrinks);
+// // let mDrinks = drinks.filter(drinks = drinks == "M...");
+// // console.log(mDrinks);
+
+// for(let i = 0;i < drinks.length;i++){
+//   if(drinks[i].charAt(0) == "M"){
+//     console.log(drinks[i]);
+//   }
+// }
 // Expected Outcome
 // mDrinks = ['Milkshake', 'Milk', 'Martini', 'Margarita']
 
 /////////////////////////////////////////////////////////////////////
-const colors = [
-  "red",
-  "black",
-  "white",
-  "blue",
-  "purple",
-  "orange",
-  "green",
-  "yellow",
-];
+// const colors = [
+//   "red",
+//   "black",
+//   "white",
+//   "blue",
+//   "purple",
+//   "orange",
+//   "green",
+//   "yellow",
+// ];
 
-let newArray = colors.map((index) => {
-  {colors, index;}
-});
+// let newArray = colors.map((index) => {
+//   {color, colors,  index;}
+// });
 
+// console.log(newArray);
+
+// for(let i = 0; i < colors.length; i++){
+//     colors.group(color: , colors[i] , index: , i;);
+// }
+
+// console.log(newArray);
 // Expected Outcome
 // [
 //   { color: "red", index: 0 },
@@ -98,9 +109,16 @@ let newArray = colors.map((index) => {
 ///////////////////////////////////////////////////////////
 const pets = ["snake", "dog", "cat", "fish", "lizard", "bird", "rabbit"];
 
-pets = pets.map((pet) => {
-  pets = pet.capitalize();
-});
-Expected Outcome
-pets = ["Snake", "Dog", "Cat", "Fish", "Lizard", "Bird", "Rabbit"];
+function capitalizeWords(pet) {
+  return pet.map(element => {
+    return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+  });
+}
+
+// 👇️ ['Hello', 'World']
+console.log(capitalizeWords(pets));
+
+
+//Expected Outcome
+//pets = ["Snake", "Dog", "Cat", "Fish", "Lizard", "Bird", "Rabbit"];
 ///////////////////////////////////////////////////////////////
